@@ -6,19 +6,15 @@
 
 const felino = {
     tipo:"pantera-negra",
-    Nome:"T'Challa",
+    nome:"T'Challa",
     idade:"34 anos",
-    ondeMora:"Wakanda",
+    ondeMora :"Wakanda",
     legado:"rei guerreiro de Wakanda",
     habilidades:"Ele ganha força, agilidade e sentidos sobre-humanos ao ingerir a Erva Coração e utiliza um traje feito de Vibranium",
 }
-
-    console.log(pantera-negra)
-    console.log(pantera-negra.nome)
-    console.log(pantera-negra.idade)
-    console.log(pantera-negra.ondeMora)
-    console.log(pantera-negra.legado)
-    console.log(pantera-negra.habilidades)
+    const detalhesFelino="Nome: "+felino.nome + "\nIdade: " +felino.idade + "\nondemora: " +felino.ondeMora + "\nlegado: " +felino.legado + "\nhabilidades: " +felino.habilidades
+    console.log(detalhesFelino)
+ 
 
 
    
