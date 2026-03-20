@@ -4,9 +4,11 @@
 // Possuem funções nativas (prontas)
 // Podem ser Interados e Checados
 
-const time =['Petter', 'Pan', 'Julia']
-   // indices    0       1       3
+const time =['Petter', 'Pan', true, , 56]
+   // indices    0       1      2     3
+time [55] // underfined
 
-   console.log(time)
-   console.log(time[1])
-   console.log(time[32])
+for (const jogador of time) {
+   console.log ("jogador: " +jogador)
+}
+   
