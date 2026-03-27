@@ -26,4 +26,4 @@ Multiplicação(12, 10)
 function Subtração(n1, n2){
     console.log("A subtração de " + n1 + " por " + n2 + " é = " + (n1 / n2))
 }
-Subtração(12, 10)
+Subtração(12, 9)
