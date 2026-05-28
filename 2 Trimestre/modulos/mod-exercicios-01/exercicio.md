@@ -1,0 +1,11 @@
+
+## Módulo Filmes PodreFlix
+
+### Crie dois arquivos (ESM):
+- 1. filmes.js -js -> crie uma função
+alugarFilme(filme, preço) que retorne uma mensagem dizendo que o filme escolhido foi alugado corretamente
+
+- 2. crie um arquivo main-filme.js -> que import e utilize a função alugarFilme(filme, preço)
+
+### Volte aqui e digite "concluido"
+-
