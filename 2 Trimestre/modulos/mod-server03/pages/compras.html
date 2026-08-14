@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras de Roupas - Loja Oficial</title>
+    <style>
+        /* Variáveis de Cor (Mesmo tema Dark da Inicial e Erro) */
+        :root {
+            --bg-page: #0f172a;
+            --bg-card: #1e293b;
+            --bg-image-placeholder: #334155;
+            --border-dashed: #64748b;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --text-light: #f1f5f9;
+            --accent-green: #22c55e;
+
+            --btn-primary-bg: #2563eb;
+            --btn-primary-hover: #1d4ed8;
+            --btn-secondary-bg: #334155;
+            --btn-secondary-hover: #475569;
+            
+            --radius-card: 16px;
+            --radius-btn: 8px;
+            --transition-speed: 0.2s ease;
+        }
+
+        /* Resets básicos */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Cabeçalho da Página */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Grid de Produtos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Card do Produto */
+        .product-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform var(--transition-speed);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Imagem do Produto */
+        .product-image {
+            width: 100%;
+            height: 180px;
+            background-color: var(--bg-image-placeholder);
+            border-radius: var(--radius-btn);
+            border: 2px dashed var(--border-dashed);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Botão Generico */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-btn);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--btn-primary-bg);
+            color: var(--text-primary);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus-visible {
+            background-color: var(--btn-primary-hover);
+            outline: none;
+        }
+
+        .btn-secondary {
+            background-color: var(--btn-secondary-bg);
+            color: var(--text-light);
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus-visible {
+            background-color: var(--btn-secondary-hover);
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1 class="title">Página de Compras</h1>
+            <p class="subtitle">Bem-vindo(a) à nossa loja! Confira os destaques abaixo.</p>
+        </header>
+
+        <main class="products-grid">
+            
+            <article class="product-card">
+                <div class="product-image">
+                    <span>[Foto Camiseta]</span>
+                </div>
+                <h2 class="product-name">Camiseta Basic</h2>
+                <p class="product-price">R$ 79,90</p>
+                <button class="btn btn-primary">
+                    <span aria-hidden="true">🛒</span> Comprar
+                </button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <span>[Foto Calça]</span>
+                </div>
+                <h2 class="product-name">Calça Jeans Dark</h2>
+                <p class="product-price">R$ 189,90</p>
+                <button class="btn btn-primary">
+                    <span aria-hidden="true">🛒</span> Comprar
+                </button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <span>[Foto Jaqueta]</span>
+                </div>
+                <h2 class="product-name">Jaqueta Moletom</h2>
+                <p class="product-price">R$ 219,90</p>
+                <button class="btn btn-primary">
+                    <span aria-hidden="true">🛒</span> Comprar
+                </button>
+            </article>
+
+        </main>
+
+        <nav style="text-align: center;">
+            <a href="/" class="btn btn-secondary">
+                <span aria-hidden="true">🏠</span> Voltar à Home
+            </a>
+        </nav>
+
+    </div>
+
+</body>
+</html>
