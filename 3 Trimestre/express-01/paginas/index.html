@@ -1,13 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stlyesheet" href="../../estilos/index.css">
-    <title>Document</title>
+    <title>Confeitaria Gourmet | Experiência Premium</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <!-- Fontes sugeridas nos requisitos: Playfair Display para títulos e Inter para o corpo -->
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../estilos/index.css">
 </head>
 <body>
-    <h3>pagina de doce</h3>
-    <p>detalhe pagina de doce</p>
-</body>
-</html>
+
+    <!-- HEADER / MENU FLUTUANTE (Sticky Header) -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span>Amélie</span>Confeitaria
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="/produtos" class="nav-link">Produtos</a>
+                <a href="/servicos" class="nav-link">Serviços</a>
+                <a href="/sobre" class="nav-link">Sobre Nós</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Validador de CEP Embutido no Topo -->
+                <div class="cep-validator">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <input type="text" placeholder="Digite seu CEP" maxlength="9">
+                </div>
+                <!-- Carrinho de Compras -->
+                <button class="cart-btn" aria-label="Carrinho de compras">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-md"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Vitrine de Impacto) -->
+    <section class="hero-section">
+        <!-- Background de Vídeo em Loop de Alta Resolução -->
+        <div class="video-background">
+            <video autoplay loop muted playsinline poster="https://unsplash.com">
+                <source src="https://mixkit.co" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">A harmonia perfeita entre a doçura e a sofisticação.</h1>
+            <p class="hero-subtitle">Feito para ser saboreado devagar.</p>
+            <div class="hero-actions">
+                <a href="/produtos" class="btn btn-primary">Quero Experimentar</a>
+                <a href="/produtos" class="btn btn-secondary">Explorar Menu Semanal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA DE BENEFÍCIOS (Ícones Lineares Modernos) -->
+    <section class="benefits-bar">
+        <div class="benefits-container">
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v10"/><path d="M14 18a2 2 0 1 1-4 0M19 18a2 2 0 1 1-4 0"/><path d="M19 14h3v2a2 2 0 0 1-2 2h-1M14 6h4v4h-4z"/></svg>
+                </div>
+                <div class="benefit-text">
+                    <h3>Entrega Expressa</h3>
+                    <p>Receba em até 2 horas na sua casa.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="benefit-text">
+                    <h3>Frescor Diário</h3>
+                    <p>Produzido e decorado no mesmo dia.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                </div>
+                <div class="benefit-text">
+                    <h3>Checkout Seguro</h3>
+                    <p>Pix ou Cartão em até 3x sem juros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARROSSEL / GRADE DE DESTAQUES (Bestsellers) -->
+    <section class="products-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Os Mais Desejados</span>
+                <h2 class="section-title">Nossos Bestsellers</h2>
+            </div>
+
+            <div class="products-grid">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="card-badge">Fornada de Hoje</span>
+                        <img src="https://unsplash.com" alt="Bolo Supremo de Cacau" class="product-img">
+                        <div class="product-hover-overlay">
+                            <a href="/produtos" class="btn-quick-add">Ver Detalhes Sensoriais</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Bolo Supremo de Cacau</h3>
+                        <p class="product-description">Massa úmida que derrete na boca com doçura equilibrada.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 89,00</span>
+                            <button class="btn-add-cart" aria-label="Adicionar ao carrinho">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="card-badge">Edição Limitada</span>
+                        <img src="https://unsplash.com" alt="Macarons de Pistache" class="product-img">
+                        <div class="product-hover-overlay">
+                            <a href="/produtos" class="btn-quick-add">Ver Detalhes Sensoriais</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Coleção Macarons Paris</h3>
+                        <p class="product-description">Casca perfeitamente crocante com ganache cremosa de pistache.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 42,00</span>
+                            <button class="btn-add-cart" aria-label="Adicionar ao carrinho">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://unsplash.com" alt="Croissant Amêndoas" class="product-img">
+                        <div class="product-hover-overlay">
+                            <a href="/produtos" class="btn-quick-add">Ver Detalhes Sensoriais</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Croissant d'Amandes</h3>
+                        <p class="product-description">Folhado artesanal dourado, recheado com creme de amêndoas denso.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 18,50</span>
+                            <button class="btn-add-cart" aria-label="Adicionar ao carrinho">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://unsplash.com" alt="Cheesecake Frutas Vermelhas" class="product-img">
+                        <div class="product-hover-overlay">
+                            <a href="/produtos" class="btn-quick-add">Ver Detalhes Sensoriais</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cheesecake de Frutas Vermelhas</h3>
+                        <p class="product-description">Base amanteigada crocante com calda ácida artesanal.</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 24,00</span>
+                            <button class="btn-add-cart" aria-label="Adicionar ao carrinho">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -6,11 +6,11 @@ const app = express()
 const porta = 3000
 
 // usado middlewaere (sofware intermediario)
-app.use(express.static(path.join(import.meta.dirname,'publico')))
+app.use(express.static(path.join(dirBase,'publico')))
 
 app.get('/', (req,res)=>{
 
-    res.sendFile('/paginas/index.html',{root: import.meta.dirname})
+    res.sendFile('paginas/index.html',{root: dirBase})
 })
 
 app. listen (porta, ()=> {console.log ('servidor está vivo')})
